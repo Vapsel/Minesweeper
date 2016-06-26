@@ -1,0 +1,28 @@
+﻿.divBoard div{
+    width: 15px; /* CellWidth */
+    height: 15px;
+    border-style: groove;
+    border-width: 3px; /* CellBorder */
+    float: left;
+    background-color: #bfbfbf;
+    text-align: center;
+    font-size: 70%;
+    margin: 0;
+}
+
+.bg-gray{
+    background-color: #edebe0 !important;
+}
+
+.bg-white{
+    background-color: #ffffff !important;
+}
+
+.flag{
+    background-image: url(flag_red-min.png);
+}
+
+.mine{
+    background-image: url(bomb-min.png);
+    background-color: #edebe0 !important;
+}
