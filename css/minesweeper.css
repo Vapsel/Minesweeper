@@ -1,28 +1,63 @@
-﻿.divBoard div{
-    width: 15px; /* CellWidth */
-    height: 15px;
-    border-style: groove;
-    border-width: 3px; /* CellBorder */
-    float: left;
-    background-color: #bfbfbf;
-    text-align: center;
-    font-size: 70%;
-    margin: 0;
+﻿/* Buttons in board (needs dehardcode width and height)*/ 
+.minesweeper-board div div div{
+    width: 29px;
+    height: 30px;
+    background-color: #FFAA00;
+    color: white;
+}
+.minesweeper-board div div div:hover {
+    background-color: #FF7400;
+}
+/***********************************************************/
+/* Nice look of main button board */
+.btn-matrix > .btn:nth-child(15n+16) {
+  clear: left;
+  margin-left: 0;
+}
+.btn-matrix > .btn:nth-child(15+16) {
+  margin-top: -1px;
+}
+.btn-matrix > .btn:first-child {
+  border-bottom-left-radius: 0;
+}
+.btn-matrix > .btn:nth-child(15) {
+  border-top-right-radius: 4px !important;
+}
+.btn-matrix > .btn:nth-last-child(15) {
+  border-bottom-left-radius: 4px !important;
+}
+.btn-matrix > .btn:last-child {
+  border-top-right-radius: 0;
+}
+.btn-matrix{
+    margin: 20px;
+}
+/* Empty gliphicon (rgba alpha = 0.0) */
+.glyphicon-none:before {
+    content: "\2122"; /* Minus sing*/
+    color: transparent !important;
 }
 
+
+
+
 .bg-gray{
-    background-color: #edebe0 !important;
+    background-color: #A44A00 !important;
 }
 
 .bg-white{
-    background-color: #ffffff !important;
+    background-color: #FF9136 !important;
 }
 
 .flag{
-    background-image: url(flag_red-min.png);
+    background-image: url("../images/redFlag.png") !important;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .mine{
-    background-image: url(bomb-min.png);
-    background-color: #edebe0 !important;
+    background-image: url("../images/bomb.png") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    /*background-color: #D15F00 !important;*/
 }
