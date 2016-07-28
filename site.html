@@ -17,15 +17,22 @@
 		$(function() {
 			var $dials = $(".dial");
 			$dials.knob({
-				'format' : function (value) {
+				'format': function (value) {
 					return "Master";
 				},
-				'release' : function(value){
+				'change': function(value){
 					return "Master";
+				},
+				'release': function(value){
+					return "Master";
+				},
+				'draw': function(){
+					console.log("draw this");
 				}
 				// 'data-width': 20
 			});
-			$dials.css('font-size', '30px');
+			$dials.css('font-size', '15px');
+			$('.dial').val(70).trigger('change');
     	});
 	</script>
 
@@ -56,7 +63,7 @@
 				<div class="panel-body">
 					<div class="col-md-3">
 						<div class="center-block">
-						<input class="dial" type="text" value="Master" data-width="50%">
+						<input class="dial" type="text" value="75" data-width="50%">
 						<p>JQuery</p>
 						</div>
 					</div>
