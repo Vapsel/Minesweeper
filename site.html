@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Bootstrap Example</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	
+
+	<script src="jquery.knob.js"></script>
+
+	
+
+	<script>
+		$(function() {
+			var $dials = $(".dial");
+			$dials.knob({
+				'format': function (value) {
+					return "Master";
+				},
+				'change': function(value){
+					return "Master";
+				},
+				'release': function(value){
+					return "Master";
+				},
+				'draw': function(){
+					console.log("draw this");
+				}
+				// 'data-width': 20
+			});
+			$dials.css('font-size', '15px');
+			$('.dial').val(70).trigger('change');
+    	});
+	</script>
+
+	<style type="text/css">
+/*		.dial{
+			font-size: 30px;
+		}
+*/	</style>
+</head>
+<body>
+
+	<div class="container">
+		<div class="panel panel-info">
+			<div class="panel-heading">
+		    	<h3 class="panel-title">Who I am?</h3>
+			</div>
+			<div class="panel-body">
+		    	Some default panel content here. Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit.
+		  	</div>
+		  	<div class="panel-heading">
+		    	<h3 class="panel-title">Skills</h3>
+			</div>
+			<div class="panel-body">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+		    	<h3 class="panel-title">Web technologies</h3>
+			</div>
+				<div class="panel-body">
+					<div class="col-md-3">
+						<div class="center-block">
+						<input class="dial" type="text" value="75" data-width="50%">
+						<p>JQuery</p>
+						</div>
+					</div>
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
+
